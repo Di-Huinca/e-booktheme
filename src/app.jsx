@@ -1,9 +1,10 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from 'react';
+import { Login } from "./UI/components/Login";
 
 export function App() {
   return (
     <Fragment>
-        <h1>Hola mundo</h1>
+        <Login />
     </Fragment>
   );
 }
