@@ -3,6 +3,7 @@ import { Login } from "./UI/components/Login";
 import { NuevaMensaje } from './UI/components/NuevaMensaje';
 import { ConfirmacionGuardado } from './UI/components/ConfirmacionGuardado';
 import { LogForm } from './UI/components/LogForm';
+import { CambioPass } from './UI/components/CambioPass';
 
 export function App() {
   return (
@@ -11,6 +12,7 @@ export function App() {
         <NuevaMensaje />
         <ConfirmacionGuardado />
         <LogForm/>
+        <CambioPass/>
     </Fragment>
   );
 }
