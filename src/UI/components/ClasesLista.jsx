@@ -1,5 +1,5 @@
 import React,{Fragment} from 'react';
-import ClasesItem from './ClasesItem';
+import { ClasesItem } from './ClasesItem';
 
 export function ClasesLista() {
   return (
