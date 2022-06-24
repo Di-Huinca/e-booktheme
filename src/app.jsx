@@ -4,6 +4,8 @@ import { NuevaMensaje } from './UI/components/NuevaMensaje';
 import { ConfirmacionGuardado } from './UI/components/ConfirmacionGuardado';
 import { LogForm } from './UI/components/LogForm';
 import { CambioPass } from './UI/components/CambioPass';
+import { HomeClasesProfesor } from './UI/components/HomeClasesProfesor';
+
 
 export function App() {
   return (
@@ -13,6 +15,8 @@ export function App() {
         <ConfirmacionGuardado />
         <LogForm/>
         <CambioPass/>
+        
+
     </Fragment>
   );
 }
