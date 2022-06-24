@@ -5,6 +5,7 @@ import { ConfirmacionGuardado } from './UI/components/ConfirmacionGuardado';
 import { LogForm } from './UI/components/LogForm';
 import { CambioPass } from './UI/components/CambioPass';
 import { HomeClasesProfesor } from './UI/components/HomeClasesProfesor';
+import { CerrarSesion } from './UI/components/CerrarSesion';
 
 
 export function App() {
@@ -15,8 +16,6 @@ export function App() {
         <ConfirmacionGuardado />
         <LogForm/>
         <CambioPass/>
-        
-
     </Fragment>
   );
 }
