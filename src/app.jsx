@@ -7,6 +7,10 @@ import { CambioPass } from './UI/components/CambioPass';
 import { HomeClasesProfesor } from './UI/components/HomeClasesProfesor';
 import { Observaciones } from './UI/components/Observaciones';
 
+
+import { Materia } from './UI/components/Materia';
+
+
 export function App() {
   return (
     <Fragment>
@@ -16,7 +20,7 @@ export function App() {
         <LogForm/>
         <CambioPass/>
         
-
+        <Materia/>
     </Fragment>
   );
 }
