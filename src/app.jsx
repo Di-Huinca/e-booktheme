@@ -7,7 +7,7 @@ import { CambioPass } from './UI/components/CambioPass';
 import { HomeClasesProfesor } from './UI/components/HomeClasesProfesor';
 import { CerrarSesion } from './UI/components/CerrarSesion';
 
-
+import { EliminarCuenta } from './UI/components/EliminarCuenta';
 
 import { Materia } from './UI/components/Materia';
 

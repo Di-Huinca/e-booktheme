@@ -6,5 +6,5 @@ export function EliminarCuenta() {
         <h4>¿Desea eliminar su cuenta?</h4>
         <button>Cancelar</button><button>Aceptar</button>
     </Fragment>
-  )
+  );
 }
