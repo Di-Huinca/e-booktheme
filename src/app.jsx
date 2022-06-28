@@ -11,6 +11,8 @@ import { EliminarCuenta } from './UI/components/EliminarCuenta';
 
 import { Materia } from './UI/components/Materia';
 
+import { VerificarEmail } from './UI/components/VerificarEmail';
+
 
 export function App() {
   return (
