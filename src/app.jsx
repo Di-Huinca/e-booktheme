@@ -17,9 +17,6 @@ import { VerificarEmail } from './UI/components/VerificarEmail';
 export function App() {
   return (
     <Fragment>
-
-      <LogForm/>
-      
     </Fragment>
   );
 }
