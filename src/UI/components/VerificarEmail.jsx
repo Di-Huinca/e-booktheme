@@ -1,6 +1,6 @@
 import React,{Fragment} from 'react'
 
-export function VerificarEmail() {
+export function VerificarEmail() { //lugar donde se puede verificar el email del usuario
   return (
    <Fragment>
     <h4>Email</h4>
