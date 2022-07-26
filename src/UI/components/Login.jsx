@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react';
 
-export function Login() {
+export function Login() { //log in 
   return (
     <Fragment>
         <h1>¡Comencemos!</h1>
