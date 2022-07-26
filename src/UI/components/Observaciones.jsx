@@ -1,6 +1,6 @@
 import React,{Fragment} from 'react';
 
-export function Observaciones() {
+export function Observaciones() { //añade una observacion a la clase del dia
   return (
     <Fragment>
         <h4>Observaciones</h4>
