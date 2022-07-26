@@ -1,6 +1,6 @@
 import React,{Fragment} from 'react';
 
-export function NuevaMensaje() {
+export function NuevaMensaje() { //mensaje de pop up para añadir una nueva evaluacion o una clase
   return (
     <Fragment>
         <h4>Nueva</h4>
