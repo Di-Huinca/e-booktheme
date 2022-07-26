@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react'
 import { ClasesAnteriores } from './ClasesAnteriores';
 
-export function ClasesItem() {
+export function ClasesItem() {//item de calses del dia
   return (
     <Fragment>
         <h1>Nombre materia</h1>
