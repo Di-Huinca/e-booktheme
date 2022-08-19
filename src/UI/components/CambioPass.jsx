@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react';
 
-export function CambioPass() {
+export function CambioPass() {//Funcion cambiar de contraseña UI
   return (
     <Fragment>
         <h6>Contraseña</h6>
