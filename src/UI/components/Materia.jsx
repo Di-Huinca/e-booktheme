@@ -1,6 +1,6 @@
 import React,{Fragment} from 'react';
 
-export function Materia() { //agrega el contenido dictado en la clase del dia
+export function Materia() { //Agrega el contenido dictado en la clase del dia
   return (
     <Fragment>
         <h1>Nombre materia</h1>

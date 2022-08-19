@@ -14,9 +14,28 @@ import { Materia } from './UI/components/Materia';
 import { VerificarEmail } from './UI/components/VerificarEmail';
 
 
-export function App() {
-  return (
-    <Fragment>
-    </Fragment>
-  );
-}
+
+  import { StackNavigator } from 'react-navigation'
+  import HomeScreen from 'UI/components/HomeScreen'
+  import MateriaScreen from 'UI/components/Materia'
+
+  const SimpleApp = StackNavigator({
+    Home: { screen: HomeScreen},
+    Materia: { screen: MateriaScreen},
+  },{
+    initialRouteName: 'Home',
+  })
+
+  AppRegistry.registerComponent('SimpleApp' , () => SimpleApp)
+
+
+
+
+
+  //export function App() {
+    //return (
+      // <Fragment>
+         
+       //</Fragment>
+     //);
+//}
