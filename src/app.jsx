@@ -15,27 +15,16 @@ import { VerificarEmail } from './UI/components/VerificarEmail';
 
 
 
-  import { StackNavigator } from 'react-navigation'
-  import HomeScreen from 'UI/components/HomeScreen'
-  import MateriaScreen from 'UI/components/Materia'
 
-  const SimpleApp = StackNavigator({
-    Home: { screen: HomeScreen},
-    Materia: { screen: MateriaScreen},
-  },{
-    initialRouteName: 'Home',
-  })
-
-  AppRegistry.registerComponent('SimpleApp' , () => SimpleApp)
+  import HomeScreen from './UI/components/HomeScreen'
+  import MateriaScreen from './UI/components/Materia'
 
 
 
-
-
-  //export function App() {
-    //return (
-      // <Fragment>
-         
-       //</Fragment>
-     //);
-//}
+  export function App() {
+    return (
+      <Fragment>
+         hola
+       </Fragment>
+     );
+}
