@@ -24,7 +24,7 @@ import { VerificarEmail } from './UI/components/VerificarEmail';
   export function App() {
     return (
       <Fragment>
-         hola como estas?
+         <Login></Login>
        </Fragment>
      );
 }

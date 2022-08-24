@@ -7,7 +7,7 @@ export function Login() { //log in
       <div className='container'>
         <h1 className='titulo'>¡Comencemos!</h1>
         <h2 className='subtitulo'>Use su DNI para ingresar</h2>
-
+    <div className='cont-input'></div>
         <input type='text' placeholder='Username'/><br />
         <input type='password' name='password' placeholder='Contraseña'/><br />
 
