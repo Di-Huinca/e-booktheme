@@ -1,0 +1,38 @@
+.root{
+    max-width: 500px;
+    width: 100%;
+    height: 100%;
+}
+
+.container{
+background-color: cadetblue;
+justify-content: left;
+align-items: left;
+}
+
+.all{
+
+}
+
+.Subtitle{
+font-size: small;
+padding: 5px;
+margin: 5px;
+margin-left: 3px;
+}
+
+.input{
+max-width: 500px;
+width: 100%;
+border-radius: 0px;
+}
+
+.boton{
+max-width: 500px;
+width: 100px;
+border-radius: 0px;
+border: none;
+padding: 15px;
+background-color:darkgray;  
+
+}

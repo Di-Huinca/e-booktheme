@@ -8,11 +8,12 @@ export function Login() { //log in
         <h1 className='titulo'>¡Comencemos!</h1>
         <h2 className='subtitulo'>Use su DNI para ingresar</h2>
         <div className='cont-input'>
-        <input type='text' placeholder='Username'/>
-        <input type='password' name='password' placeholder='Contraseña'/>
-       
-        <input type='checkbox' name='checkbox' />
-        <label For="checkbox"> Mantener sesion activa</label>
+        <input className='text' type='text' placeholder='Username'/>
+        <input className='password' type='password' name='password' placeholder='Password'/>
+          <div className='cont-sesion'>       
+            <input className='checkbox' type='checkbox' name='checkbox' />
+            <label For="checkbox"> Mantener sesion activa</label>
+          </div>
         </div>
         <button className='boton'>INGRESAR</button>
 
