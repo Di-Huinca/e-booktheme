@@ -19,20 +19,23 @@ font-size: small;
 padding: 5px;
 margin: 5px;
 margin-left: 3px;
+justify-content: left;
+text-align: left;
 }
 
 .input{
 max-width: 500px;
 width: 100%;
 border-radius: 0px;
+padding: 25px;
 }
 
 .boton{
 max-width: 500px;
-width: 100px;
+width: 100%;
 border-radius: 0px;
 border: none;
-padding: 15px;
 background-color:darkgray;  
 
 }
+
