@@ -6,7 +6,6 @@ export function CambioPass() {//Funcion cambiar de contraseña UI
     <Fragment>
         <div className='container'>
 
-        <div className='all'> 
         <h6 className='Subtitle'>Contraseña</h6>
         <input className='input' type="password" placeholder='Contraseña actual' />
         
@@ -17,11 +16,10 @@ export function CambioPass() {//Funcion cambiar de contraseña UI
         <input className='input' type="password" placeholder='Contraseña nueva'/>
         </div>
         
-        <div>
+        <div className='caja-boton'>
         <button className='boton'>GUARDAR</button>
         </div>
 
-        </div>
     </Fragment>
   );
 }
