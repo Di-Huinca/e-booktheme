@@ -1,13 +1,21 @@
 import React, {Fragment} from 'react'
+import './ConfirmacionGuardado.css'
 
 export function ConfirmacionGuardado() {//mensaje de pop up de confirmacion
   return (
     <Fragment>
-      <h4>¿Desea guardar lo hecho en el dia?</h4>
+      <div className="general">
+        <h4 className='h4'>¿Desea guardar lo hecho en el dia?</h4>
+          
+            <div className="cancelar">
+               <button className='cancel'>Cancelar</button>
+            </div>
 
-      <button>Cancelar</button>
-      <button>Confirmar</button>
+            <div className="aceptar">
+                <button className='confirm'>Confirmar</button>
+            </div>
 
+      </div>
     </Fragment>
   )
 }
