@@ -2,6 +2,7 @@ import React,{Fragment, Component} from 'react'
 
 export class LogForm extends Component{ //formulario de registro 
 
+  
 
   state = {
     dni: '',
