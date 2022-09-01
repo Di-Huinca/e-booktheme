@@ -14,7 +14,7 @@ export function Login() { //log in
 
         <button>INGRESAR</button>
 
-        <div>No tenes cuenta? <a>Regístrate aquí.</a></div>
+        <div>No tenes cuenta? Regístrate aquí.</div>
     </Fragment>
   );
 }
