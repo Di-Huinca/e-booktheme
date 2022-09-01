@@ -1,6 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { App } from "./app";
+import { BrowserRouter,Routes,Route } from "react-router-dom";
+import { App } from "./App.jsx";
 import './index.css'
+import { HomeClasesProfesor } from "./UI/routes/HomeClasesProfesor.jsx";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+const root = ReactDOM.createRoot(
+    document.getElementById("root")
+);
+
+root.render(
+    <BrowserRouter>
+            <Routes>
+                <Route path='/' elemnt={<App/>} />
+                <Route path='home' element={<HomeClasesProfesor/>} />
+            </Routes>
+    </BrowserRouter>
+);
