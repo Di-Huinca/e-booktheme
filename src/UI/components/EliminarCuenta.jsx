@@ -3,8 +3,17 @@ import React,{Fragment} from 'react'
 export function EliminarCuenta() {//Mensaje de eliminacion de cuenta pop up
   return (
     <Fragment>
-        <h4>¿Desea eliminar su cuenta?</h4>
-        <button>Cancelar</button><button>Aceptar</button>
+      <div className='contenedor'>
+        <h4 className='texto'>¿Desea eliminar su cuenta?</h4>
+        <div>
+            <div className='button'>
+                <button className='btn'>Cancelar</button>
+                <button className='btn'>Aceptar</button>
+            </div>
+        </div>
+      
+      </div>
+
     </Fragment>
   );
 }

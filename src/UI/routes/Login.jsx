@@ -1,20 +1,24 @@
 import React, {Fragment} from 'react';
+import './Login.css'
 
 export function Login() { //log in 
   return (
     <Fragment>
-        <h1>¡Comencemos!</h1>
-        <h2>Use su DNI para ingresar</h2>
+      <div className='container'>
+        <h1 className='titulo'>¡Comencemos!</h1>
+        <h2 className='subtitulo'>Use su DNI para ingresar</h2>
+        <div className='cont-input'>
+        <input className='text' type='text' placeholder='Username'/>
+        <input className='password' type='password' name='password' placeholder='Password'/>
+          <div className='cont-sesion'>       
+            <input className='checkbox' type='checkbox' name='checkbox' />
+            <label For="checkbox"> Mantener sesion activa</label>
+          </div>
+        </div>
+        <button className='boton'>INGRESAR</button>
 
-        <input type='text' placeholder='Username'/><br />
-        <input type='password' name='password' placeholder='Contraseña'/><br />
-
-        <input type='checkbox' name='checkbox' />
-        <label For="checkbox"> Mantener sesion activa</label><br />
-
-        <button>INGRESAR</button>
-
-        <div>No tenes cuenta? Regístrate aquí.</div>
+        <div className='info'>No tenes cuenta? <a href="#">Regístrate aquí.</a></div>
+        </div>
     </Fragment>
   );
 }
