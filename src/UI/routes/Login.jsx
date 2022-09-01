@@ -1,5 +1,6 @@
 import React, {Fragment} from 'react';
-import './Login.css'
+import { Link } from 'react-router-dom';
+import '../components/Login.css'
 
 export function Login() { //log in 
   return (
@@ -17,7 +18,7 @@ export function Login() { //log in
         </div>
         <button className='boton'>INGRESAR</button>
 
-        <div className='info'>No tenes cuenta? <a href="#">Regístrate aquí.</a></div>
+        <div className='info'>No tenes cuenta? <Link to='/logform'>Regístrate aquí</Link></div>
         </div>
     </Fragment>
   );

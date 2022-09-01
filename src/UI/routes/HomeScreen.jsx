@@ -13,6 +13,7 @@ export default function HomeScreen() {
         <div className='contenido-container'>
           <Link to="/home/profesor">Pagina del profe </Link>
           <Link to='/login'>Login</Link> 
+          <Link to ='/cerrar-sesion'>Cerrar Sesión</Link>
         </div>
        </Fragment> 
   )
