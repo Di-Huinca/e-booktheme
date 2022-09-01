@@ -1,4 +1,4 @@
-import React,{Fragment, Component} from 'react'
+import React,{ Component} from 'react'
 
 export class LogForm extends Component{ //formulario de registro 
 
