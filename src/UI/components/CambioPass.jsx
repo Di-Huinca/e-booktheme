@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import './CambioPass.css'
+import '../components/styles/CambioPass.css'
 
 export function CambioPass() {//Funcion cambiar de contraseña UI
   return (

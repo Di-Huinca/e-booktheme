@@ -1,4 +1,5 @@
 import React,{Fragment} from 'react'
+import '../components/styles/EliminarCuenta.css'
 
 export function EliminarCuenta() {//Mensaje de eliminacion de cuenta pop up
   return (

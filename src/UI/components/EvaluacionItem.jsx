@@ -1,5 +1,5 @@
 import React from 'react'
-import './EvaluacionItem.css'
+import '../components/styles/EvaluacionItem.css'
 
 export function EvaluacionItem(props) {
   return (

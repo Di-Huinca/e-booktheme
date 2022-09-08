@@ -1,5 +1,5 @@
 import React,{Fragment} from 'react'
-import  './CerrarSesion.css'
+import '../components/styles/CerrarSesion.css';
 
 
 export function CerrarSesion() {//mensaje de pop up preguntado si desea cerrar sesion

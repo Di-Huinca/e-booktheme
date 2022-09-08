@@ -1,6 +1,6 @@
 import React from 'react';
 import { EvaluacionItem } from './EvaluacionItem';
-import './EvaluacionesLista.css';
+import '../components/styles/EvaluacionesLista.css';
 import { Typography } from '@mui/material';
 
 const EvaluacionesLista = () => {

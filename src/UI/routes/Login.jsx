@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react';
 import { Link } from 'react-router-dom';
-import '../components/Login.css'
+import '../components/styles/Login.css'
 
 export default function Login() { //log in 
   return (

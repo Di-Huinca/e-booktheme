@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react'
-import './ConfirmacionGuardado.css'
+import '../components/styles/ConfirmacionGuardado.css'
 import './index.css'
 
 export function ConfirmacionGuardado() {//mensaje de pop up de confirmacion
