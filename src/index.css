@@ -3,3 +3,13 @@
     margin: 0;
     padding: 0;
 }
+#root{
+    height: 100vh;
+    background: red;
+}
+.lista-container{
+    background-color: rgb(255, 174, 45);
+    padding: 10px 20px;
+    margin: 0;
+}
+
