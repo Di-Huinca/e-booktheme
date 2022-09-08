@@ -1,0 +1,10 @@
+.lista-container{
+    background-color: rgb(255, 174, 45);
+    padding: 10px 20px;
+    margin: 0;
+    
+}
+.titulo-evaluaciones{
+    font-size: 20px;
+    font-weight: 500;
+}
