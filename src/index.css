@@ -4,7 +4,7 @@
     padding: 0;
 }
 #root{
-    height: 100vh;
+    height: 100vh; /*ocupa todo el alto disponible.*/
     background: red;
 }
 .lista-container{
