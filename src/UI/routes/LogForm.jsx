@@ -1,7 +1,9 @@
-import React,{Fragment, Component} from 'react'
+import React,{ Component} from 'react'
+import { Link } from 'react-router-dom';
 
 export class LogForm extends Component{ //formulario de registro 
 
+  
 
   state = {
     dni: '',
@@ -30,7 +32,7 @@ export class LogForm extends Component{ //formulario de registro
         <input type="text" name='dni' placeholder="DNI" onChange={this.onChange} value={this.state.dni}/><br />
         <input type="password" name='password' placeholder='Contraseña' onChange={this.onChange} value={this.state.password}/><br />
         <input type="text" name='email' placeholder='Email' onChange={this.onChange} value={this.state.email}/><br />
-        <button type='submit'>Registrar</button>
+        <Link to='/'> <button type='submit'>Registrar</button></Link>
       </form>
     );
   }

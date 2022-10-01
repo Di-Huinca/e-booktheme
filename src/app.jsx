@@ -1,10 +1,13 @@
-import React, { Fragment } from 'react';
-import { HomeClasesProfesor } from './UI/components/HomeClasesProfesor';
+import React from 'react';
+import { BrowserRouter,Routes,Route } from "react-router-dom";
+
 
   export function App() {
     return (
-      <Fragment>
-      <HomeClasesProfesor/>
-       </Fragment>
+      <BrowserRouter>
+        <Routes>
+            <Route></Route>
+        </Routes>
+      </BrowserRouter>
      );
 }

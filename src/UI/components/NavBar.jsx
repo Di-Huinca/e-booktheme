@@ -3,7 +3,7 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
+import ArrowBack from '@mui/icons-material/ArrowBack';
 
 export default function NavBar() {
   return (
@@ -14,10 +14,10 @@ export default function NavBar() {
             size="large"
             edge="start"
             color="inherit"
-            aria-label="menu"
+            aria-label="arrow"
             sx={{ mr: 2 }}
           >
-            <MenuIcon />
+            <ArrowBack/>
           </IconButton>
         </Toolbar>
       </AppBar>
