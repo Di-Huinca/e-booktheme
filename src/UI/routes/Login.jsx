@@ -1,24 +1,69 @@
 import React, {Fragment} from 'react';
 import { Link } from 'react-router-dom';
 import '../components/Login.css';
-import {GoogleAuthProvider,signInWithPopup} from "firebase/auth";
+import {GoogleAuthProvider,signInWithPopup,onAuthStateChanged} from "firebase/auth";
 import {auth} from "../firebase/firebase"
+import { useEffect } from 'react';
+import { useState } from 'react';
 
+
+export default function LoginView(){
+  const [currentUser, setCurrentUser] = useState(null);
+  /*
+  Estados: 
+  0= Inicializando
+  1= loading
+  2= login completo
+  3= login pero sin registro
+  4= No hay nadie logueado
+  */
+  const [state, setCurrenState] = useState(0);
+}
 
 export function Login() { //log in 
+
+  useEffect(()=> {
+
+    setCurrentState(1);
+    onAuthStateChanged(auth, handleUserStateChanged);
+  },[]);
+
+
+  function handleUserStateChanged(user){
+    if(user){
+      setCurrenState(3);
+      console.log(user.displayName);
+    }else{
+      setCurrenState(4);
+      console.log("No hay nadie autenticado.....")
+      }
+    
+  }
   async function handleOnClick(){
     const googleProvider = new GoogleAuthProvider()
-    await signInWithGoogle(googleProvider)
+    await signInWithGoogle(googleProvider);
+
+      async function signInWithGoogle(googleProvider){
+        try {
+          const res = await signInWithPopup(auth,googleProvider)
+          console.log(res)
+        } catch (error) {
+          console.error(error)
+        }
+    }
   }
-  
-  async function signInWithGoogle(googleProvider){
-      try {
-        const res = await signInWithPopup(auth,googleProvider)
-        console.log(res)
-      } catch (error) {
-        console.error(error)
-      }
-  };
+if (state == 1){
+  return <div>Cargando....</div>
+}
+
+if (state == 3){
+  return <div>Estas autenticado pero no estas registrado</div>
+}
+
+if(state=4){
+  return <div>Cargando....</div>
+}
+
   return (
     <Fragment>
       <div className='container'>
