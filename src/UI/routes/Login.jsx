@@ -2,9 +2,10 @@ import React, {Fragment} from 'react';
 import { Link } from 'react-router-dom';
 import '../components/Login.css';
 import {GoogleAuthProvider,signInWithPopup,onAuthStateChanged} from "firebase/auth";
-import {auth} from "../firebase/firebase"
+import {auth, userExists} from "../firebase/firebase"
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { async } from '@firebase/util';
 
 
 export default function LoginView(){
@@ -29,19 +30,22 @@ export function Login() { //log in
   },[]);
 
 
-  function handleUserStateChanged(user){
-    if(user){
-      setCurrenState(3);
-      console.log(user.displayName);
-    }else{
-      setCurrenState(4);
-      console.log("No hay nadie autenticado.....")
+  async function handleUserStateChanged(user){
+    if (user) {
+      const isRegistered = userExists(user.uid);
+      if (isRegistered) {
+          setCurrenState(2)
+      } else {
+          setCurrenState(3)
+      } else {
+        setCurrenState(4)
+        console.log("No hay nadie autenticado.....")
       }
-    
-  }
+    }
+  
   async function handleOnClick(){
     const googleProvider = new GoogleAuthProvider()
-    await signInWithGoogle(googleProvider);
+    await signInWithGoogle(googleProvider)
 
       async function signInWithGoogle(googleProvider){
         try {
@@ -79,4 +83,4 @@ if(state=4){
         </div>
     </Fragment>
   );
-}
+
