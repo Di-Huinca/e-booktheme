@@ -2,8 +2,7 @@
 import React,{ useState } from 'react';
 import { BrowserRouter,Routes,Route } from "react-router-dom";
 
-import {Login} from "./UI/routes/Login"
-import {LogForm} from "./UI/routes/LogForm"
+import Login from "./UI/routes/Login"
 import Home from './UI/routes/Home';
 
 import firebaseApp from './firebase/firebase';
@@ -28,7 +27,6 @@ const auth = getAuth(firebaseApp);
       <BrowserRouter>
         <Routes>
             <Route path='/' element={<Login/>}/>
-            <Route path='logform' element={<LogForm/>}/>
             <Route path='home' element={<Home/>}/>
             
         </Routes>
