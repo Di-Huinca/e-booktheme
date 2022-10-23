@@ -8,7 +8,6 @@ import { firebaseApp } from '../../firebase/firebase'
 import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore'
 import { getAuth, signOut } from 'firebase/auth';
 import AgregarEvaluacion from '../components/AgregarEvaluacion';
-import Sidebar from '../components/Sidebar';
 
 const firestore = getFirestore(firebaseApp);
 const auth = getAuth(firebaseApp)
@@ -84,8 +83,6 @@ const Home = ({correoUsuario}) => {
           setArrayTareas={setArrayTareas}
           correoUsuario={correoUsuario} />) : null}
 
-          <Sidebar/>
-          
       </Container>
     );
 };
