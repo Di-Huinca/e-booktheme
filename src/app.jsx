@@ -1,6 +1,4 @@
-
 import React,{ useState } from 'react';
-import { BrowserRouter,Routes,Route } from "react-router-dom";
 
 import Login from "./UI/routes/Login"
 import Home from './UI/routes/Home';
@@ -23,16 +21,9 @@ const auth = getAuth(firebaseApp);
       }
     })
 
-    return (<>
-      <BrowserRouter>
-        <Routes>
-            <Route path='/' element={<Login/>}/>
-            <Route path='home' element={<Home/>}/>
-            
-        </Routes>
-      </BrowserRouter>
-
-      {usuarioGlobal ? <Home correoUsuario={usuarioGlobal.email}/> : <Login/>}
+    return (
+      <>
+        {usuarioGlobal ? <Home correoUsuario={usuarioGlobal.email}/> : <Login/>}
       </>
      );
 }

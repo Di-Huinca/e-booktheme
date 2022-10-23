@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {App}  from "./App.jsx";
 import './index.css'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Router from "./UI/routes/routes";
 
 
 const root = ReactDOM.createRoot(
@@ -11,5 +11,5 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(
-    <App/>
+    <Router/>
 );
