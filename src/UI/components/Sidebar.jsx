@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import { IoIosAlbums,IoMdClose, IoMdLogOut, IoMdDocument, IoMdMenu,IoMdClipboard} from 'react-icons/io'
+import { IoIosAlbums,IoMdClose, IoMdLogOut, IoMdDocument, IoMdMenu} from 'react-icons/io'
 import { Link } from 'react-router-dom'
 import './Sidebar.css'
 
@@ -10,7 +10,6 @@ const Sidebar = () => {
  const activateNav = () => {
   setActive(!active)
  }
-
   return (
     <div className={active ? 'sidebar' : 'sidebar-mobile'}>
 
