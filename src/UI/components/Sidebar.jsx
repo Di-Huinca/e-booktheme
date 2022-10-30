@@ -1,38 +1,31 @@
-import React,{useState} from 'react'
-import { IoIosAlbums,IoMdClose, IoMdLogOut, IoMdDocument, IoMdMenu} from 'react-icons/io'
+import { signOut } from 'firebase/auth'
+import React from 'react'
+import { IoIosAlbums,IoMdLogOut, IoMdDocument} from 'react-icons/io'
 import { Link } from 'react-router-dom'
 import './Sidebar.css'
 
-const Sidebar = () => {
 
- const [active, setActive] = useState (false);
- 
- const activateNav = () => {
-  setActive(!active)
- }
+const Sidebar = ({auth}) => {
+
+
   return (
-    <div className={active ? 'sidebar' : 'sidebar-mobile'}>
 
-        <div className="menu-icon" onClick={activateNav}>
-              {!active ? <IoMdMenu className='menu'/> : <IoMdClose className='menu'/>}
-        </div>
+    <div className="nav_cont">
 
-        <nav>
-           <ul className={active ? 'ul-item' : 'ul-item oicon'}> 
-              <li>
-                <IoMdDocument className='icon' />
-                <Link to='/'>Evaluaciones</Link>
-              </li>
-              <li>
-                <IoIosAlbums className='icon' />
-                <Link to='/'>Materias</Link>
-              </li>
-              <li>
-                <IoMdLogOut className='icon' />
-                <Link to='/'>Cerrar Sesion</Link>
-              </li>
-            </ul>
-        </nav>
+      <ul className="nav">
+        <li className="nav-items">
+          <IoMdDocument className='icon' />
+          <Link to='/'>Evaluaciones</Link>
+        </li>
+        <li className="nav-items">
+          <IoIosAlbums className='icon' />
+          <Link to='/'>Materias</Link>
+        </li>
+        <li className="nav-items"  onClick={() => signOut(auth)}>
+          <IoMdLogOut className='icon' />
+          <Link to='/login'>Cerrar Sesion</Link>
+        </li>
+      </ul>
     </div>
   )
 }
