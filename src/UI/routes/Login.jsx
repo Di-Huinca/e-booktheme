@@ -52,8 +52,8 @@ const Login = () => {
             <h1 className='title'>{estaRegistrandose ? "Registrate" : "e-booktheme"}</h1>
             <Form onSubmit={submitHandler}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label size= "sm" className='email'>Ingrese su Email</Form.Label>
-                <Form.Control size= "40px" classsName='email.label' type="email" placeholder="nombre@example.com" />
+                <Form.Label size="sm" className='email'>Ingrese su Email</Form.Label>
+                <Form.Control size="40px" classsName='email.label' type="email" placeholder="nombre@example.com" />
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -62,21 +62,21 @@ const Login = () => {
               </Form.Group>
 
               <div className='Roles'>
-              <Form.Group controlId="exampleForm.ControlSelect">
-                <Form.Label>Elija su rol</Form.Label>
-                <Form.Control as="select">
-                  <option>Profesor</option>
-                  <option>Preceptor</option>
-                  <option>Administrador</option>
-                </Form.Control>
-              </Form.Group>
+                <Form.Group controlId="exampleForm.ControlSelect">
+                  <Form.Label>Rol</Form.Label>
+                  <Form.Control as="select">
+                    <option>Profesor</option>
+                    <option>Preceptor</option>
+                    <option>Administrador</option>
+                  </Form.Control>
+                </Form.Group>
               </div>
 
               <div className='button'>
                 <Button
 
-                variant="dark" 
-                type="submit">
+                  variant="dark"
+                  type="submit">
 
                   {estaRegistrandose ? "Registrate" : "Inicia Sesion"}
                 </Button>
@@ -84,7 +84,7 @@ const Login = () => {
             </Form>
             <div className="acceder">
               <Button size='lg'
-             
+
                 variant="primary"
                 type="submit"
                 style={{ width: "300px" }}

@@ -1,5 +1,5 @@
 .log-container{
-    background-color: rgb(255, 255, 255);
+    background-color: #46929A;
     justify-content: center;
     align-items: center;
     padding: 100px;
@@ -17,7 +17,7 @@ font-size: 40px;
 }
 
 .panel{
-    background-color: #46929A;
+    background-color: #FFFF;
     padding: 100px;
     margin: 0 400px 0;
     border-radius: 80px;
