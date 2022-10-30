@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Stack, Container, Form, Button } from 'react-bootstrap'
 import './Login.css'
 
-import logo from '../../assets/img/logo.png'
+// import logo from '../../assets/img/logo.png'
 
 import firebaseApp from '../../firebase/firebase'
 import {
@@ -44,9 +44,10 @@ const Login = () => {
       <div className="panel">
 
         <Container>
-          <div className=''>
+          {/* <div className=''>
             <img src={logo}/>
-          </div>
+          </div> */}
+
           <Stack gap={3}>
             <h1 className='title'>{estaRegistrandose ? "Registrate" : "e-booktheme"}</h1>
             <Form onSubmit={submitHandler}>

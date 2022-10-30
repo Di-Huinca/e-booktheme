@@ -32,7 +32,7 @@ const auth = getAuth(firebaseApp);
         </Routes>
       </BrowserRouter>
 
-      {usuarioGlobal ? <Home correoUsuario={usuarioGlobal.email}/> : <Login/>}
+      {/* {usuarioGlobal ? <Home correoUsuario={usuarioGlobal.email}/> : <Login/>} */}
       </>
      );
 }
