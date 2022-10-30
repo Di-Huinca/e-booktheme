@@ -1,5 +1,5 @@
 .log-container{
-    background-color: cadetblue;
+    background-color: rgb(255, 255, 255);
     justify-content: center;
     align-items: center;
     padding: 100px;
@@ -17,11 +17,22 @@ font-size: 40px;
 }
 
 .panel{
-    background-color: aliceblue;
-    padding: 60px;
-    margin: 0 200px 0;
-    border-radius: 50px;
+    background-color: #46929A;
+    padding: 100px;
+    margin: 0 400px 0;
+    border-radius: 80px;
 }
+
+.button{
+    padding-top: 30px;
+    text-align: center;
+}
+
+.acceder{
+    text-align: center;
+
+}
+
 
 
 
