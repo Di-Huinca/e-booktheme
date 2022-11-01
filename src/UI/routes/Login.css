@@ -1,34 +1,53 @@
 .log-container{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(12,1fr);
     background-color: #46929A;
     justify-content: center;
     align-items: center;
     padding: 100px;
     height: 100vh;
+    width: 100%;
 
+}
+.panel-login{
+    grid-area: 3/3/11/11;
+    background-color: #FFFF;
+    border-radius: 30px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    box-shadow: 4px 7px 10px rgba(0,0,0,.4);
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: repeat(8,1fr);
+    
 }
 
 .title{
 text-align: center;
 font-size: 40px;
+
 }
 
-.Container{
+
+.items{
+    justify-content: center;
+    position: center;
     align-items: center;
-}
-
-.panel{
-    background-color: #FFFF;
-    padding: 100px;
-    margin: 0 400px 0;
-    border-radius: 80px;
+  
 }
 
 .button{
-    padding-top: 30px;
+    padding: 30px;
+    text-align: center;
+    margin: 10px;
+}
+
+.registrarse{
     text-align: center;
 }
 
 .acceder{
+    padding-top: 20px;
     text-align: center;
 
 }

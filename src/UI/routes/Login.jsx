@@ -41,60 +41,62 @@ const Login = () => {
 
   return (
     <div className='log-container'>
-      <div className="panel">
+      <div className="panel-login">
 
-        <Container>
-          {/* <div className=''>
+        <div classname='items'>
+          <Container>
+            {/* <div className=''>
             <img src={logo}/>
           </div> */}
 
-          <Stack gap={3}>
-            <h1 className='title'>{estaRegistrandose ? "Registrate" : "e-booktheme"}</h1>
-            <Form onSubmit={submitHandler}>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label size="sm" className='email'>Ingrese su Email</Form.Label>
-                <Form.Control size="40px" classsName='email.label' type="email" placeholder="nombre@example.com" />
-              </Form.Group>
-
-              <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label className='Password'>Contraseña</Form.Label>
-                <Form.Control type="password" placeholder="Password" />
-              </Form.Group>
-
-              <div className='Roles'>
-                <Form.Group controlId="exampleForm.ControlSelect">
-                  <Form.Label>Rol</Form.Label>
-                  <Form.Control as="select">
-                    <option>Profesor</option>
-                    <option>Preceptor</option>
-                    <option>Administrador</option>
-                  </Form.Control>
+            <Stack gap={3}>
+              <h1 className='title'>{estaRegistrandose ? "Registrate" : "e-booktheme"}</h1>
+              <Form onSubmit={submitHandler}>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Label size="sm" className='email'>Ingrese su Email</Form.Label>
+                  <Form.Control size="40px" classsName='email.label' type="email" placeholder="nombre@example.com" />
                 </Form.Group>
-              </div>
 
-              <div className='button'>
-                <Button
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                  <Form.Label className='Password'>Contraseña</Form.Label>
+                  <Form.Control type="password" placeholder="Password" />
+                </Form.Group>
 
-                  variant="dark"
-                  type="submit">
+                <div className='Roles'>
+                  <Form.Group controlId="exampleForm.ControlSelect">
+                    <Form.Label>Rol</Form.Label>
+                    <Form.Control as="select">
+                      <option>Profesor</option>
+                      <option>Preceptor</option>
+                      <option>Administrador</option>
+                    </Form.Control>
+                  </Form.Group>
+                </div>
 
-                  {estaRegistrandose ? "Registrate" : "Inicia Sesion"}
-                </Button>
-              </div>
-            </Form>
-            <div className="acceder">
-              <Button size='lg'
+                <div className='button'>
+                      <div classname= "Registrarse">
+                      <Button
+                        variant="dark"
+                        type="submit">
 
-                variant="primary"
-                type="submit"
-                style={{ width: "300px" }}
-                onClick={() => signInWithRedirect(auth, googleProvider)}
-              >
-                Acceder con Google
-              </Button>
-            </div>
-          </Stack>
-        </Container>
+                        {estaRegistrandose ? "Registrate" : "Inicia Sesion"}
+                      </Button>
+                      </div>
+                      <div className='acceder'>
+                      <Button
+                        variant="primary"
+                        type="submit"
+                        style={{ width: "150px" }}
+                        onClick={() => signInWithRedirect(auth, googleProvider)}
+                      >
+                        Acceder con Google
+                      </Button>
+                      </div>
+                </div>
+              </Form>
+            </Stack>
+          </Container>
+        </div>
       </div>
     </div>
   )
