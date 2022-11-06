@@ -1,81 +1,107 @@
 import React, { useState } from 'react'
 import { Stack, Container, Form, Button } from 'react-bootstrap'
+import './Login.css'
 
-import firebaseApp  from '../../firebase/firebase'
+// import logo from '../../assets/img/logo.png'
+
+import firebaseApp from '../../firebase/firebase'
 import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signInWithRedirect,
-  GoogleAuthProvider,
+  GoogleAuthProvider
 } from "firebase/auth"
 
+
 const auth = getAuth(firebaseApp)
+
 const googleProvider = new GoogleAuthProvider()
 
 const Login = () => {
   const { estaRegistrandose, setEstaRegistrandose } = useState(false)
 
-  async function submitHandler(e){
+  async function submitHandler(e) {
     e.preventDefault()
     const correo = e.target.formBasicEmail.value
     const contra = e.target.formBasicPassword.value
 
-  if (estaRegistrandose) {
-    // Si el usuario se registra
-    const usuario = await createUserWithEmailAndPassword(
-      auth,
-      correo,
-      contra
-    )
-  } else {
-    // Si esta iniciando sesión
-    signInWithEmailAndPassword(auth, correo, contra)
+    if (estaRegistrandose) {
+      // Si el usuario se registra
+      const usuario = await createUserWithEmailAndPassword(
+        auth,
+        correo,
+        contra
+      )
+    } else {
+      // Si esta iniciando sesión
+      signInWithEmailAndPassword(auth, correo, contra)
+    }
   }
-}
 
   return (
-    <Container>
-      <Stack gap={3}>
-        <h1>{estaRegistrandose ? "Registrate" : "Inicia Sesion"}</h1>
-        <Form onSubmit={submitHandler}>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Email address</Form.Label>
-            <Form.Control type="email" placeholder="Enter email" />
-          </Form.Group>
+    <div className='log-container'>
+      <div className="panel-login">
 
-          <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label>Password</Form.Label>
-            <Form.Control type="password" placeholder="Password" />
-          </Form.Group>
+        <div classname='items'>
+          <Container>
+            {/* <div className=''>
+            <img src={logo}/>
+          </div> */}
 
-          <Button variant="dark" type="submit">
-            {estaRegistrandose ? "Registrate" : "Inicia Sesion"}
-          </Button>
-        </Form>
+            <Stack gap={3}>
+              <h1 className='title'>{estaRegistrandose ? "Registrate" : "e-booktheme"}</h1>
+              <Form onSubmit={submitHandler}>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Label size="sm" className='email'>Ingrese su Email</Form.Label>
+                  <Form.Control size="40px" classsName='email.label' type="email" placeholder="nombre@example.com" />
+                </Form.Group>
 
-        <Button
-          variant="primary"
-          type="submit"
-          style={{ width: "300px" }}
-          onClick={() => signInWithRedirect(auth, googleProvider)}
-        >
-          Acceder con Google
-        </Button>
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                  <Form.Label className='Password'>Contraseña</Form.Label>
+                  <Form.Control type="password" placeholder="Password" />
+                </Form.Group>
 
-        <Button 
-          style={{ width: "300px"}}
-          variant="secondary" 
-          onClick={() => setEstaRegistrandose(!estaRegistrandose)}
-        >
-          {estaRegistrandose 
-            ? "¿Ya tienes cuenta? Inicia Sesión" 
-            :  "¿No tienes cuenta? Registrate"}
-      </Button>
-    </Stack>
-    </Container >
+                <div className='Roles'>
+                  <Form.Group controlId="exampleForm.ControlSelect">
+                    <Form.Label>Rol</Form.Label>
+                    <Form.Control as="select">
+                      <option>Profesor</option>
+                      <option>Preceptor</option>
+                      <option>Administrador</option>
+                    </Form.Control>
+                  </Form.Group>
+                </div>
+
+                <div className='button'>
+                      <div classname= "Registrarse">
+                      <Button
+                        variant="dark"
+                        type="submit">
+
+                        {estaRegistrandose ? "Registrate" : "Inicia Sesion"}
+                      </Button>
+                      </div>
+                      <div className='acceder'>
+                      <Button
+                        variant="primary"
+                        type="submit"
+                        style={{ width: "150px" }}
+                        onClick={() => signInWithRedirect(auth, googleProvider)}
+                      >
+                        Acceder con Google
+                      </Button>
+                      </div>
+                </div>
+              </Form>
+            </Stack>
+          </Container>
+        </div>
+      </div>
+    </div>
   )
 }
+
 
 export default Login
 

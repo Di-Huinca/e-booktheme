@@ -1,13 +1,17 @@
 import React, {useEffect, useState} from 'react';
-import { Button, Container } from 'react-bootstrap'
 
-import ListarEvaluaciones from '../components/ListarEvaluaciones';
-import  ListarMaterias  from '../components/ListarMaterias';
+import '../routes/Home.css'
+import Sidebar from '../components/Sidebar'
+import Head from '../components/Head';
+import MainCont from '../components/MainCont';
+
+// import ListarEvaluaciones from '../components/ListarEvaluaciones';
+// import  ListarMaterias  from '../components/ListarMaterias';
+// import AgregarEvaluacion from '../components/AgregarEvaluacion';
 
 import { firebaseApp } from '../../firebase/firebase'
 import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore'
-import { getAuth, signOut } from 'firebase/auth';
-import AgregarEvaluacion from '../components/AgregarEvaluacion';
+import { getAuth} from 'firebase/auth';
 
 const firestore = getFirestore(firebaseApp);
 const auth = getAuth(firebaseApp)
@@ -66,24 +70,28 @@ const Home = ({correoUsuario}) => {
   // }, [])
 
   return(
-      <Container>
-          <h4>Hola, sesion iniciada...</h4>
-          <Button onClick={() => signOut(auth)}>Cerrar sesion</Button>
 
-          <AgregarEvaluacion
-            arrayEvaluaciones={arrayEvaluaciones}
-            setArrayEvaluaciones={setArrayEvaluaciones}
-            correoUsuario={correoUsuario}
-          />
+      //     <AgregarEvaluacion
+      //       arrayEvaluaciones={arrayEvaluaciones}
+      //       setArrayEvaluaciones={setArrayEvaluaciones}
+      //       correoUsuario={correoUsuario}
+      //     />
 
-          {arrayEvaluaciones ? ( <ListarEvaluaciones arrayEvaluaciones={arrayEvaluaciones}
-          setArrayEvaluaciones={setArrayEvaluaciones}
-          correoUsuario={correoUsuario} />) : null}
-          {arrayTareas ? ( <ListarMaterias arrayTareas={arrayTareas}
-          setArrayTareas={setArrayTareas}
-          correoUsuario={correoUsuario} />) : null}
+      //     {arrayEvaluaciones ? ( <ListarEvaluaciones arrayEvaluaciones={arrayEvaluaciones}
+      //     setArrayEvaluaciones={setArrayEvaluaciones}
+      //     correoUsuario={correoUsuario} />) : null}
+      //     {arrayTareas ? ( <ListarMaterias arrayTareas={arrayTareas}
+      //     setArrayTareas={setArrayTareas}
+      //     correoUsuario={correoUsuario} />) : null}
 
-      </Container>
+
+      <>
+          <div className="home">
+              <div className="sidebar-container"><Sidebar auth={auth}/></div>
+              <div className="header-container"><Head/></div>
+              <div className="main-panel"><MainCont/></div>
+          </div>
+      </>
     );
 };
 
