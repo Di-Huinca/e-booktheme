@@ -4,7 +4,7 @@ import './Login.css'
 
 // import logo from '../../assets/img/logo.png'
 
-import firebaseApp from '../../firebase/firebase'
+import { firebaseApp } from '../firebase/firebase'
 import {
   getAuth,
   createUserWithEmailAndPassword,

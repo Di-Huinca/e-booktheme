@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import './index.css'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Router from "./UI/routes/routes";
+import App from "./App";
 
 
 const root = ReactDOM.createRoot(
@@ -11,5 +11,5 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(
-    <Router/>
+    <App/>
 );
