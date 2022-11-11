@@ -1,7 +1,5 @@
 import {useContext, createContext, useEffect, useState} from 'react';
 import {
-    createUserWithEmailAndPassword,
-    signInWithEmailAndPassword,
     signInWithRedirect,
     GoogleAuthProvider,
     signOut,
