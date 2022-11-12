@@ -12,10 +12,7 @@ import {
   signInWithRedirect,
   GoogleAuthProvider
 } from "firebase/auth"
-
-
 const auth = getAuth(firebaseApp)
-
 const googleProvider = new GoogleAuthProvider()
 
 const Login = () => {
@@ -43,7 +40,7 @@ const Login = () => {
     <div className='log-container'>
       <div className="panel-login">
 
-        <div classname='items'>
+        <div className='items'>
           <Container>
             {/* <div className=''>
             <img src={logo}/>
@@ -54,7 +51,7 @@ const Login = () => {
               <Form onSubmit={submitHandler}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Label size="sm" className='email'>Ingrese su Email</Form.Label>
-                  <Form.Control size="40px" classsName='email.label' type="email" placeholder="nombre@example.com" />
+                  <Form.Control size="40px" className='email.label' type="email" placeholder="nombre@example.com" />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -74,7 +71,7 @@ const Login = () => {
                 </div>
 
                 <div className='button'>
-                      <div classname= "Registrarse">
+                      <div className= "Registrarse">
                       <Button
                         variant="dark"
                         type="submit">
