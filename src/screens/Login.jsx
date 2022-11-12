@@ -1,9 +1,9 @@
+//Dependencias
 import React, { useState } from 'react'
 import { Stack, Container, Form, Button } from 'react-bootstrap'
+//Estilos
 import './Login.css'
-
-// import logo from '../../assets/img/logo.png'
-
+//Base de datos
 import { firebaseApp } from '../firebase/firebase'
 import {
   getAuth,

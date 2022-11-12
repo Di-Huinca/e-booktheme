@@ -1,13 +1,13 @@
+//Dependencias
 import React from "react";
-
+import { Route, Routes } from "react-router-dom";
+//Pantallas
 import Login from "./screens/Login";
 import Home from "./screens/Home";
 import NotFound from "./screens/NotFound";
-  // import Protected from './components/Protected'
+// import Protected from './components/Protected'
 
-import { Route, Routes } from "react-router-dom";
-
-export default function App() {
+  export default function App() {
   return (
     <>
       

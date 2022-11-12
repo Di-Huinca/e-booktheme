@@ -1,18 +1,18 @@
+//Dependencias
 import React, {useEffect, useState} from 'react';
-
-import './Home.css'
+//Componentes
 import Sidebar from '../components/Sidebar'
 import Head from '../components/Head';
 import MainCont from '../components/MainCont';
-
 // import ListarEvaluaciones from '../components/ListarEvaluaciones';
 // import  ListarMaterias  from '../components/ListarMaterias';
 // import AgregarEvaluacion from '../components/AgregarEvaluacion';
-
+//Estilos
+import './Home.css'
+//Base de datos
 import { firebaseApp } from '../firebase/firebase'
 import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore'
 import { getAuth} from 'firebase/auth';
-
 const firestore = getFirestore(firebaseApp);
 const auth = getAuth(firebaseApp)
 

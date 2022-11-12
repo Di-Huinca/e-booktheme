@@ -1,7 +1,10 @@
-import { signOut } from 'firebase/auth'
+//Dependencias
 import React from 'react'
-import { IoIosAlbums,IoMdLogOut, IoMdDocument} from 'react-icons/io'
 import { Link } from 'react-router-dom'
+//Base de datos
+import { signOut } from 'firebase/auth'
+//Estilos
+import { IoIosAlbums,IoMdLogOut, IoMdDocument} from 'react-icons/io'
 import './Sidebar.css'
 
 
