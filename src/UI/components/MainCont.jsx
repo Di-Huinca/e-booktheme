@@ -5,8 +5,8 @@ import './MainCont.css'
 const MainCont = () => {
     return (
         <>
-            <div className="panel">
-            <h3 className="titulo">Sus Materias</h3>
+            <h3 className="titulo" >Sus Materias</h3>
+            <div className="panel" >
 
                 <Card className='card' style={{ width: '10rem' }}>
                     <Card.Img variant="top" src="holder.js/100px180" />
