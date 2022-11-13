@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import '../routes/Home.css'
+import './Home.css'
 import Sidebar from '../components/Sidebar'
 import Head from '../components/Head';
 import MainCont from '../components/MainCont';
@@ -9,7 +9,7 @@ import MainCont from '../components/MainCont';
 import ModalEval from '../components/ModalEvaluacion';
 import Modal from '../components/Modal'
 
-import firebaseApp from '../../firebase/firebase'
+import firebaseApp from '../firebase/firebase'
 import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore'
 import { getAuth } from 'firebase/auth';
 

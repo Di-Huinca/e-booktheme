@@ -1,8 +1,9 @@
 //Dependencias
 import React, { useState } from 'react'
-import { Stack, Container, Form, Button } from 'react-bootstrap'
+import { Stack, Container,Button } from 'react-bootstrap'
 //Estilos
 import './Login.css'
+import Logo from '../assets/img/logo.png'
 //Base de datos
 import { firebaseApp } from '../firebase/firebase'
 import {
@@ -49,43 +50,9 @@ const Login = () => {
 
             <Stack gap={3}>
               <h1 className='title'>{estaRegistrandose ? "Registrate" : "e-booktheme"}</h1>
-<<<<<<< HEAD:src/screens/Login.jsx
-              <Form onSubmit={submitHandler}>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                  <Form.Label size="sm" className='email'>Ingrese su Email</Form.Label>
-                  <Form.Control size="40px" className='email.label' type="email" placeholder="nombre@example.com" />
-                </Form.Group>
-
-                <Form.Group className="mb-3" controlId="formBasicPassword">
-                  <Form.Label className='Password'>Contraseña</Form.Label>
-                  <Form.Control type="password" placeholder="Password" />
-                </Form.Group>
-
-                <div className='Roles'>
-                  <Form.Group controlId="exampleForm.ControlSelect">
-                    <Form.Label>Rol</Form.Label>
-                    <Form.Control as="select">
-                      <option>Profesor</option>
-                      <option>Preceptor</option>
-                      <option>Administrador</option>
-                    </Form.Control>
-                  </Form.Group>
-                </div>
-
-                <div className='button'>
-                      <div className= "Registrarse">
-                      <Button
-                        variant="dark"
-                        type="submit">
-
-                        {estaRegistrandose ? "Registrate" : "Inicia Sesion"}
-                      </Button>
-                      </div>
-=======
               
                 <div className='button'>
                       
->>>>>>> Feat_estilos:src/UI/routes/Login.jsx
                       <div className='acceder'>
                       <Button
                         variant="primary"
