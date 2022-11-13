@@ -5,14 +5,13 @@ import Sidebar from '../components/Sidebar'
 import Head from '../components/Head';
 import MainCont from '../components/MainCont';
 
-// import ListarEvaluaciones from '../components/ListarEvaluaciones';
-// import  ListarMaterias  from '../components/ListarMaterias';
-// import AgregarEvaluacion from '../components/AgregarEvaluacion';
+// Ventanas Modal
+import ModalEval from '../components/ModalEvaluacion';
+import Modal from '../components/Modal'
 
 import firebaseApp from '../../firebase/firebase'
 import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore'
 import { getAuth } from 'firebase/auth';
-import ModalExample from '../components/Modal';
 
 const firestore = getFirestore(firebaseApp);
 const auth = getAuth(firebaseApp)
@@ -66,31 +65,7 @@ const Home = ({ correoUsuario }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  // useEffect(() => {
-  //         async function obtenerTareas(){
-  //       const tareasObtenidas = await buscarDocumentoOrCrearDocumento(correoUsuario);
-  //       setArrayTareas(tareasObtenidas);
-  //     }
-  //     obtenerTareas();
-  // }, [])
-
-
-
   return (
-
-    //     <AgregarEvaluacion
-    //       arrayEvaluaciones={arrayEvaluaciones}
-    //       setArrayEvaluaciones={setArrayEvaluaciones}
-    //       correoUsuario={correoUsuario}
-    //     />
-
-    //     {arrayEvaluaciones ? ( <ListarEvaluaciones arrayEvaluaciones={arrayEvaluaciones}
-    //     setArrayEvaluaciones={setArrayEvaluaciones}
-    //     correoUsuario={correoUsuario} />) : null}
-    //     {arrayTareas ? ( <ListarMaterias arrayTareas={arrayTareas}
-    //     setArrayTareas={setArrayTareas}
-    //     correoUsuario={correoUsuario} />) : null}
-
 
     <>
       <div className="home">
@@ -98,7 +73,8 @@ const Home = ({ correoUsuario }) => {
         <div className="header-container"><Head /></div>
 
         <div className="main-panel">
-          <ModalExample />
+          <Modal />
+          <ModalEval />
           <MainCont />
         </div>
       </div>
