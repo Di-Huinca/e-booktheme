@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Button, Table } from 'react-bootstrap'
+import eliminarEvaluacion from '../functions/eliminarEvaluacion'
 import getEvaluaciones from '../functions/getEvaluaciones'
 import './MainCont.css'
 
@@ -20,7 +21,7 @@ const MainCont = () => {
         <>
             <h3 className="titulo" >Sus Materias</h3>
             <div className="panel" >
-                 <Table>
+                <Table>
                     <thead>
                         <tr>
                             <th>Fecha</th>
@@ -35,7 +36,16 @@ const MainCont = () => {
                                 <td>{evaluacion.tema}</td>
                                 <td>
                                     <Button variant='dark'>Editar</Button>
-                                    <Button variant='danger'>Eliminar</Button>
+                                    <Button variant='danger'
+                                        onClick={() => {
+                                            eliminarEvaluacion(evaluacion).then(
+                                                confirmacion => {
+                                                    updateEstadoEvaluacion()
+                                                }
+                                            )
+                                        }}>
+                                        Eliminar
+                                    </Button>
                                 </td>
                             </tr>
                         ))}
