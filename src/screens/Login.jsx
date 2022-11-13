@@ -49,7 +49,7 @@ const Login = () => {
             </div>
 
             <Stack gap={3}>
-              <h1 className='title'>{estaRegistrandose ? "Registrate" : "e-booktheme"}</h1>
+              <h1 className='title'>e-booktheme</h1>
               
                 <div className='button'>
                       
