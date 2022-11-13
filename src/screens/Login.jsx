@@ -42,12 +42,14 @@ const Login = () => {
 
         <div className='items'>
           <Container>
-            {/* <div className=''>
-            <img src={logo}/>
-          </div> */}
+
+            <div className='logo-container'>
+              <img className='img' src={Logo} width={"150px"} height={"150px"}/>
+            </div>
 
             <Stack gap={3}>
               <h1 className='title'>{estaRegistrandose ? "Registrate" : "e-booktheme"}</h1>
+<<<<<<< HEAD:src/screens/Login.jsx
               <Form onSubmit={submitHandler}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Label size="sm" className='email'>Ingrese su Email</Form.Label>
@@ -79,6 +81,11 @@ const Login = () => {
                         {estaRegistrandose ? "Registrate" : "Inicia Sesion"}
                       </Button>
                       </div>
+=======
+              
+                <div className='button'>
+                      
+>>>>>>> Feat_estilos:src/UI/routes/Login.jsx
                       <div className='acceder'>
                       <Button
                         variant="primary"
@@ -90,7 +97,6 @@ const Login = () => {
                       </Button>
                       </div>
                 </div>
-              </Form>
             </Stack>
           </Container>
         </div>
