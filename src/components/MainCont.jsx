@@ -4,8 +4,12 @@ import eliminarEvaluacion from '../functions/eliminarEvaluacion'
 import getEvaluaciones from '../functions/getEvaluaciones'
 import './MainCont.css'
 
+import ModalEditar from './ModalEditarEvaluacion'
+
 const MainCont = () => {
     const [evaluaciones, setEvaluaciones] = useState([]);
+    const [isModalEditar, setIsModalEditar] = useState(false);
+    const [evaluacionEditar, setEvaluacionEditar] = useState({});
 
     function updateEstadoEvaluacion() {
         getEvaluaciones().then((evaluaciones) => {
@@ -19,6 +23,15 @@ const MainCont = () => {
 
     return (
         <>
+
+            {evaluacionEditar &&
+                (<ModalEditar
+                    isModalEditar={isModalEditar}
+                    setIsModalEditar={setIsModalEditar}
+                    updateEstadoEvaluacion={updateEstadoEvaluacion}
+                    evaluacionEditar={evaluacionEditar}
+                    setEvaluacionEditar={setEvaluacionEditar}
+                />)}
             <h3 className="titulo" >Sus Materias</h3>
             <div className="panel" >
                 <Table>
@@ -35,7 +48,15 @@ const MainCont = () => {
                                 <td>{evaluacion.fecha}</td>
                                 <td>{evaluacion.tema}</td>
                                 <td>
-                                    <Button variant='dark'>Editar</Button>
+                                    <Button
+                                        variant='dark'
+                                        onClick={() => {
+                                            setEvaluacionEditar({...evaluacion},)
+                                            setIsModalEditar(true);
+                                            
+                                        }}>
+                                        Editar
+                                    </Button>
                                     <Button variant='danger'
                                         onClick={() => {
                                             eliminarEvaluacion(evaluacion).then(
