@@ -1,6 +1,7 @@
 //Dependencias
 import React, { useState } from 'react'
-import { Stack, Container,Button } from 'react-bootstrap'
+import { Stack, Container, Button } from 'react-bootstrap'
+// import { withRouter } from 'react-router-dom';
 //Estilos
 import './Login.css'
 import Logo from '../assets/img/logo.png'
@@ -8,32 +9,25 @@ import Logo from '../assets/img/logo.png'
 import { firebaseApp } from '../firebase/firebase'
 import {
   getAuth,
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
   signInWithRedirect,
   GoogleAuthProvider
 } from "firebase/auth"
+import { useNavigate } from 'react-router-dom/dist';
 const auth = getAuth(firebaseApp)
 const googleProvider = new GoogleAuthProvider()
 
 const Login = () => {
-  const { estaRegistrandose, setEstaRegistrandose } = useState(false)
 
-  async function submitHandler(e) {
-    e.preventDefault()
-    const correo = e.target.formBasicEmail.value
-    const contra = e.target.formBasicPassword.value
+  const navigate = useNavigate()
 
-    if (estaRegistrandose) {
-      // Si el usuario se registra
-      const usuario = await createUserWithEmailAndPassword(
-        auth,
-        correo,
-        contra
-      )
-    } else {
-      // Si esta iniciando sesión
-      signInWithEmailAndPassword(auth, correo, contra)
+  const iniciarSesion = async () => {
+    try {
+      await signInWithRedirect(auth, googleProvider)
+      .then(
+        navigate('../')
+        )
+    }catch(error){
+      console.log(error.message)
     }
   }
 
@@ -45,25 +39,25 @@ const Login = () => {
           <Container>
 
             <div className='logo-container'>
-              <img className='img' src={Logo} width={"150px"} height={"150px"}/>
+              <img className='img' src={Logo} width={"150px"} height={"150px"} />
             </div>
 
             <Stack gap={3}>
               <h1 className='title'>e-booktheme</h1>
-              
-                <div className='button'>
-                      
-                      <div className='acceder'>
-                      <Button
-                        variant="primary"
-                        type="submit"
-                        style={{ width: "150px" }}
-                        onClick={() => signInWithRedirect(auth, googleProvider)}
-                      >
-                        Acceder con Google
-                      </Button>
-                      </div>
+
+              <div className='button'>
+
+                <div className='acceder'>
+                  <Button
+                    variant="primary"
+                    type="submit"
+                    style={{ width: "150px" }}
+                    onClick={iniciarSesion}
+                  >
+                    Acceder con Google
+                  </Button>
                 </div>
+              </div>
             </Stack>
           </Container>
         </div>
