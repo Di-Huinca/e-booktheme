@@ -5,6 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import Login from "./screens/Login";
 import Home from "./screens/Home";
 import NotFound from "./screens/NotFound";
+import Evaluacion from "./screens/Evaluacion";
 // import Protected from './components/Protected'
 
   export default function App() {
@@ -15,6 +16,7 @@ import NotFound from "./screens/NotFound";
         <Route path="/" element={<Home/>} />
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/evaluacion" element={<Evaluacion/>}/>
       </Routes>
       
     </>
