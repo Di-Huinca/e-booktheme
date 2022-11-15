@@ -60,7 +60,7 @@ function ModalEval({ isModalAñadir, setIsModalAñadir }) {
           <Button variant="secondary" onClick={handleClose}>
             Cerrar
           </Button>
-          <Button variant="primary" onClick={() => añadirEvaluacionModal}>
+          <Button variant="primary" onClick={añadirEvaluacionModal}>
             Guardar cambios
           </Button>
         </Modal.Footer>
