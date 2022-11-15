@@ -1,19 +1,20 @@
 //Dependencias
 import React, { useState } from 'react';
 //Estilos
-import './Evaluacion.css'
+import './Materia.css'
 //Componentes
 import Sidebar from '../components/Sidebar'
 import Head from '../components/Head';
 import MainCont from '../components/MainCont';
-import ModalEval from '../components/ModalEvaluacion';
+import Modal from '../components/Modal'
+// import ModalEval from '../components/ModalEvaluacion';
 //Base de datos
 import firebaseApp from '../firebase/firebase'
 import { getAuth } from 'firebase/auth';
 const auth = getAuth(firebaseApp)
 
 
-const Evaluacion = () => {
+const Materia = () => {
   const [isModalAñadir, setIsModalAñadir] = useState(false);
 
   function añadirEvaluacion() {
@@ -22,17 +23,18 @@ const Evaluacion = () => {
   return (
 
     <>
-      <div className="evaluacion">
+      <div className="materia">
         <div className="sidebar-container"><Sidebar auth={auth} /></div>
         <div className="header-container"><Head /></div>
 
         <div className="main-panel">
-          <ModalEval isModalAñadir={isModalAñadir} setIsModalAñadir={setIsModalAñadir} />
-          <MainCont nombre="Evaluación"/>
+            <Modal />
+          {/* <ModalEval isModalAñadir={isModalAñadir} setIsModalAñadir={setIsModalAñadir} /> */}
+          <MainCont nombre="Materia"/>
         </div>
       </div>
     </>
   );
 };
 
-export default Evaluacion;
+export default Materia;

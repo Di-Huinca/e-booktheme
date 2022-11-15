@@ -6,6 +6,7 @@ import Login from "./screens/Login";
 import Home from "./screens/Home";
 import NotFound from "./screens/NotFound";
 import Evaluacion from "./screens/Evaluacion";
+import Materia from "./screens/Materia";
 // import Protected from './components/Protected'
 
   export default function App() {
@@ -17,6 +18,7 @@ import Evaluacion from "./screens/Evaluacion";
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<NotFound />} />
         <Route path="/evaluacion" element={<Evaluacion/>}/>
+        <Route path="/materia" element={<Materia/>}/>
       </Routes>
       
     </>

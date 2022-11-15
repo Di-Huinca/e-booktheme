@@ -6,7 +6,7 @@ import './MainCont.css'
 
 import ModalEditar from './ModalEditarEvaluacion'
 
-const MainCont = () => {
+const MainCont = ({nombre}) => {
     const [evaluaciones, setEvaluaciones] = useState([]);
     const [isModalEditar, setIsModalEditar] = useState(false);
     const [evaluacionEditar, setEvaluacionEditar] = useState({});
@@ -32,7 +32,7 @@ const MainCont = () => {
                     evaluacionEditar={evaluacionEditar}
                     setEvaluacionEditar={setEvaluacionEditar}
                 />)}
-            <h3 className="titulo" >Sus Materias</h3>
+            <h3 className="titulo" >Nueva {nombre}</h3>
             <div className="panel" >
                 <Table>
                     <thead>
