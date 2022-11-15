@@ -5,10 +5,11 @@
     background-color: #292929;
     justify-content: center;
     align-items: center;
+    height: 100vh;
      /* Con imagen */
-    background-image: url(../assets/img/logfile-c.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
+    background-image: url(../assets/img/libro_img.jpg);
+    background-repeat: repeat-x;
+    background-size: 60%;
     /* Color gradient azulado*/
      /* background-image: linear-gradient(rgb(6, 45, 129),white); */
      /* Color gradient negro y blanco */

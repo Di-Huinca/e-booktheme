@@ -14,11 +14,11 @@ import Materia from "./screens/Materia";
     <>
       
       <Routes>
-        <Route path="/" element={<Home/>} />
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<NotFound />} />
         <Route path="/evaluacion" element={<Evaluacion/>}/>
         <Route path="/materia" element={<Materia/>}/>
+        <Route path="/" element={<Home/>}/>
       </Routes>
       
     </>

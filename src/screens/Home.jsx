@@ -7,7 +7,7 @@ import Sidebar from '../components/Sidebar'
 import Head from '../components/Head';
 import MainCont from '../components/MainCont';
 import ModalEval from '../components/ModalEvaluacion';
-import Modal from '../components/Modal'
+import Modal from '../components/ModalClase'
 //Base de datos
 import firebaseApp from '../firebase/firebase'
 import { getAuth } from 'firebase/auth';
@@ -30,7 +30,7 @@ const Home = () => {
         <div className="main-panel">
           <Modal />
           <ModalEval isModalAñadir={isModalAñadir} setIsModalAñadir={setIsModalAñadir} />
-          <MainCont />
+          <MainCont nombreEvaluacion='Evaluaciones' nombreClase='Clases' />
         </div>
       </div>
     </>
