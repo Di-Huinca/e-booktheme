@@ -1,0 +1,9 @@
+
+.panel{
+    margin: 10px 28px ;
+    display: grid;
+    gap: 10px;
+    background-color:  #EBEBEB;
+    padding: 28px;
+    border-radius: 10px;
+}
