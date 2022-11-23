@@ -6,7 +6,7 @@ import './Materia.css'
 import Sidebar from '../components/Sidebar'
 import Head from '../components/Head';
 import MainCont from '../components/MainCont';
-import Modal from '../components/Modal'
+import Modal from '../components/ModalClase'
 // import ModalEval from '../components/ModalEvaluacion';
 //Base de datos
 import firebaseApp from '../firebase/firebase'
